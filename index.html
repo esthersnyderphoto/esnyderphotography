@@ -9,41 +9,49 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 
   <style>
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: 'Lora', serif;
       background-color: #faf9f7;
       color: #3b3b3b;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     header {
-      background: linear-gradient(rgba(250,249,247,0.85), rgba(250,249,247,0.85)), url('hero.jpg');
+      background: linear-gradient(rgba(250,249,247,0.88), rgba(250,249,247,0.88)), url('hero.jpg');
       background-size: cover;
       background-position: center;
-      padding: 7rem 1.5rem;
+      padding: 8rem 1.5rem;
       text-align: center;
     }
 
     header h1 {
-      margin: 0;
       font-family: 'Montserrat', sans-serif;
       font-weight: 300;
-      font-size: 3.4rem;
+      font-size: 3.6rem;
       letter-spacing: 3px;
       text-transform: uppercase;
+      margin: 0;
     }
 
     header p {
-      margin-top: 1.2rem;
-      font-size: 1.25rem;
+      margin-top: 1.5rem;
       font-style: italic;
+      font-size: 1.25rem;
       color: #6b6b6b;
     }
 
     .cta-button {
       display: inline-block;
-      margin-top: 2.5rem;
-      padding: 0.85rem 3rem;
+      margin-top: 3rem;
+      padding: 0.9rem 3.5rem;
       border: 1px solid #3b3b3b;
       text-decoration: none;
       color: #3b3b3b;
@@ -51,7 +59,8 @@
       font-weight: 300;
       letter-spacing: 2px;
       text-transform: uppercase;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
+      transition: all 0.35s ease;
     }
 
     .cta-button:hover {
@@ -62,11 +71,11 @@
     nav {
       position: sticky;
       top: 0;
-      background: rgba(250,249,247,0.95);
-      backdrop-filter: blur(6px);
+      background: rgba(250,249,247,0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #e2e2e2;
       padding: 1rem;
       text-align: center;
-      border-bottom: 1px solid #e2e2e2;
       z-index: 10;
     }
 
@@ -77,31 +86,42 @@
       font-family: 'Montserrat', sans-serif;
       font-weight: 300;
       letter-spacing: 1.5px;
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #000;
     }
 
     section {
       max-width: 1200px;
-      margin: 6rem auto;
+      margin: 7rem auto;
       padding: 0 1.5rem;
+      animation: fadeUp 1s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     h2 {
-      text-align: center;
-      margin-bottom: 1rem;
       font-family: 'Montserrat', sans-serif;
       font-weight: 300;
-      font-size: 2.4rem;
+      font-size: 2.5rem;
       letter-spacing: 2px;
       text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 1rem;
     }
 
     .section-subtitle {
       text-align: center;
       font-style: italic;
       color: #777;
-      margin-bottom: 3.5rem;
+      margin-bottom: 4rem;
     }
 
     .about {
@@ -109,21 +129,24 @@
       margin: auto;
       text-align: center;
       line-height: 1.9;
-      font-size: 1.05rem;
     }
 
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 3rem;
-      margin-top: 4rem;
     }
 
     .service-box {
-      text-align: center;
-      padding: 2.5rem 2rem;
-      border: 1px solid #e6e6e6;
       background: #fff;
+      border: 1px solid #e6e6e6;
+      padding: 3rem 2rem;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .service-box:hover {
+      transform: translateY(-6px);
     }
 
     .service-box h3 {
@@ -132,19 +155,12 @@
       letter-spacing: 1.5px;
       text-transform: uppercase;
       font-size: 1rem;
-      margin-bottom: 1rem;
     }
 
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: 360px;
-      object-fit: cover;
     }
 
     .gallery-alt {
@@ -154,9 +170,9 @@
       margin-top: 4rem;
     }
 
-    .gallery-alt img {
+    .gallery img, .gallery-alt img {
       width: 100%;
-      height: 420px;
+      height: 380px;
       object-fit: cover;
     }
 
@@ -164,23 +180,21 @@
       max-width: 900px;
       margin: auto;
       display: grid;
-      gap: 3rem;
+      gap: 3.5rem;
     }
 
     .testimonial {
       text-align: center;
       font-style: italic;
-      font-size: 1.05rem;
-      line-height: 1.8;
+      line-height: 1.9;
     }
 
     .testimonial span {
       display: block;
       margin-top: 1rem;
       font-family: 'Montserrat', sans-serif;
-      font-style: normal;
       letter-spacing: 1px;
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       text-transform: uppercase;
     }
 
@@ -190,10 +204,10 @@
       text-align: center;
     }
 
-    form input, form textarea {
+    form input, form textarea, form select {
       width: 100%;
-      padding: 0.9rem;
-      margin-bottom: 1.3rem;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
       border: none;
       border-bottom: 1px solid #bbb;
       background: transparent;
@@ -202,15 +216,16 @@
     }
 
     form button {
-      margin-top: 1.5rem;
-      background: none;
+      margin-top: 2rem;
+      padding: 0.9rem 3.5rem;
       border: 1px solid #3b3b3b;
-      padding: 0.85rem 3rem;
+      background: none;
       font-family: 'Montserrat', sans-serif;
       font-weight: 300;
       letter-spacing: 2px;
       text-transform: uppercase;
       cursor: pointer;
+      transition: all 0.35s ease;
     }
 
     form button:hover {
@@ -218,11 +233,32 @@
       color: #fff;
     }
 
+    .instagram {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .instagram a {
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 2px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: #3b3b3b;
+      border-bottom: 1px solid #3b3b3b;
+      padding-bottom: 0.25rem;
+      transition: color 0.3s ease;
+    }
+
+    .instagram a:hover {
+      color: #000;
+    }
+
     footer {
       background: #f2efeb;
       text-align: center;
       padding: 4rem 1rem;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: #6b6b6b;
     }
   </style>
@@ -245,76 +281,64 @@
 
 <section id="about">
   <h2>About</h2>
-  <p class="section-subtitle">Intimate, romantic, and full of meaning</p>
-  <p class="about">
-    Esther Snyder Photography specializes in capturing connection — the quiet moments,
-    the laughter between couples, and the tender bond between mothers and their babies.
-    With a refined, neutral aesthetic, each session is designed to feel effortless,
-    relaxed, and deeply personal.
-  </p>
+  <p class="section-subtitle">Intimate, romantic, and timeless imagery</p>
+  <p class="about">I specialize in capturing love stories and motherhood with a refined, natural approach — preserving fleeting seasons with honesty and warmth.</p>
 </section>
 
 <section id="services">
   <h2>Services</h2>
-  <p class="section-subtitle">Tailored sessions for every love story</p>
+  <p class="section-subtitle">Tailored sessions for meaningful moments</p>
   <div class="services">
-    <div class="service-box">
-      <h3>Couples</h3>
-      <p>Romantic, storytelling sessions that celebrate connection and intimacy.</p>
-    </div>
-    <div class="service-box">
-      <h3>Maternity & Motherhood</h3>
-      <p>Soft, elegant imagery honoring pregnancy and the early days of motherhood.</p>
-    </div>
-    <div class="service-box">
-      <h3>Newborn</h3>
-      <p>Gentle, natural sessions capturing the beauty of new beginnings.</p>
-    </div>
+    <div class="service-box"><h3>Couples</h3><p>Romantic storytelling sessions.</p></div>
+    <div class="service-box"><h3>Motherhood</h3><p>Soft maternity and newborn imagery.</p></div>
+    <div class="service-box"><h3>Weddings</h3><p>Elegant, emotional wedding coverage.</p></div>
   </div>
 </section>
 
 <section id="gallery">
   <h2>Gallery</h2>
-  <p class="section-subtitle">A curated selection of recent work</p>
+  <p class="section-subtitle">A curated collection</p>
   <div class="gallery">
-    <img src="photo1.jpg" alt="Photography sample">
-    <img src="photo2.jpg" alt="Photography sample">
-    <img src="photo3.jpg" alt="Photography sample">
+    <img src="photo1.jpg"><img src="photo2.jpg"><img src="photo3.jpg">
   </div>
-
   <div class="gallery-alt">
-    <img src="photo4.jpg" alt="Photography sample">
-    <img src="photo5.jpg" alt="Photography sample">
-    <img src="photo6.jpg" alt="Photography sample">
+    <img src="photo4.jpg"><img src="photo5.jpg"><img src="photo6.jpg">
   </div>
 </section>
 
 <section id="testimonials">
   <h2>Testimonials</h2>
-  <p class="section-subtitle">Kind words from clients</p>
+  <p class="section-subtitle">Words from past clients</p>
   <div class="testimonials">
-    <div class="testimonial">“Esther captured our love so beautifully and naturally. The photos feel timeless and emotional — exactly what we hoped for.”<span>— Couples Session</span></div>
-    <div class="testimonial">“As a new mom, I felt completely comfortable. Esther’s calm presence and eye for detail made these photos so special.”<span>— Motherhood Session</span></div>
-    <div class="testimonial">“Every image feels like a memory frozen in time. We will treasure these forever.”<span>— Newborn Session</span></div>
+    <div class="testimonial">“Every image feels emotional and timeless.”<span>— Couples Session</span></div>
+    <div class="testimonial">“She made motherhood photos feel effortless.”<span>— New Mom</span></div>
   </div>
 </section>
 
 <section id="contact">
   <h2>Book a Session</h2>
-  <p class="section-subtitle">I’d be honored to tell your story</p>
+  <p class="section-subtitle">I’d love to connect</p>
   <div class="contact">
-    <form action="https://formspree.io/f/YOURFORMID" method="POST">
+    <form action="https://formspree.io/f/xaqdegyg" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Tell me about your vision" required></textarea>
+      <select name="session_type" required>
+        <option value="">Select Session Type</option>
+        <option>Family</option><option>Wedding</option><option>Couple</option><option>Newborn</option><option>Graduate</option>
+      </select>
+      <textarea name="message" placeholder="Tell me about your vision" required></textarea>
+      <input type="hidden" name="_subject" value="New Photography Inquiry">
+      <input type="hidden" name="_redirect" value="success.html">
       <button type="submit">Send Inquiry</button>
     </form>
+
+    <div class="instagram">
+      <a href="https://instagram.com/esthersnyder_photography" target="_blank">Follow on Instagram</a>
+    </div>
   </div>
 </section>
 
-<footer>
-  © 2026 Esther Snyder Photography · All rights reserved
-</footer>
+<footer>© 2026 Esther Snyder Photography</footer>
 
 </body>
 </html>
