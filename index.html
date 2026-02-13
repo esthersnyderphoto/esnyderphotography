@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Esther Snyder Photography</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Lora', serif;
+      background-color: #faf9f7;
+      color: #3b3b3b;
+    }
+
+    header {
+      background: linear-gradient(rgba(250,249,247,0.85), rgba(250,249,247,0.85)), url('hero.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 7rem 1.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      font-size: 3.4rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    header p {
+      margin-top: 1.2rem;
+      font-size: 1.25rem;
+      font-style: italic;
+      color: #6b6b6b;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 2.5rem;
+      padding: 0.85rem 3rem;
+      border: 1px solid #3b3b3b;
+      text-decoration: none;
+      color: #3b3b3b;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+    }
+
+    .cta-button:hover {
+      background: #3b3b3b;
+      color: #fff;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(250,249,247,0.95);
+      backdrop-filter: blur(6px);
+      padding: 1rem;
+      text-align: center;
+      border-bottom: 1px solid #e2e2e2;
+      z-index: 10;
+    }
+
+    nav a {
+      margin: 0 1.5rem;
+      text-decoration: none;
+      color: #3b3b3b;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      letter-spacing: 1.5px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: 6rem auto;
+      padding: 0 1.5rem;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      font-size: 2.4rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-style: italic;
+      color: #777;
+      margin-bottom: 3.5rem;
+    }
+
+    .about {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      line-height: 1.9;
+      font-size: 1.05rem;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 3rem;
+      margin-top: 4rem;
+    }
+
+    .service-box {
+      text-align: center;
+      padding: 2.5rem 2rem;
+      border: 1px solid #e6e6e6;
+      background: #fff;
+    }
+
+    .service-box h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+    }
+
+    .gallery-alt {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 4rem;
+    }
+
+    .gallery-alt img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+    }
+
+    .testimonials {
+      max-width: 900px;
+      margin: auto;
+      display: grid;
+      gap: 3rem;
+    }
+
+    .testimonial {
+      text-align: center;
+      font-style: italic;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .testimonial span {
+      display: block;
+      margin-top: 1rem;
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      letter-spacing: 1px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+    }
+
+    .contact {
+      max-width: 650px;
+      margin: auto;
+      text-align: center;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.9rem;
+      margin-bottom: 1.3rem;
+      border: none;
+      border-bottom: 1px solid #bbb;
+      background: transparent;
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+    }
+
+    form button {
+      margin-top: 1.5rem;
+      background: none;
+      border: 1px solid #3b3b3b;
+      padding: 0.85rem 3rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background: #3b3b3b;
+      color: #fff;
+    }
+
+    footer {
+      background: #f2efeb;
+      text-align: center;
+      padding: 4rem 1rem;
+      font-size: 0.85rem;
+      color: #6b6b6b;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Esther Snyder Photography</h1>
+  <p>"your story, captured forever."</p>
+  <a href="#contact" class="cta-button">Book a Session</a>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#testimonials">Testimonials</a>
+  <a href="#contact">Book</a>
+</nav>
+
+<section id="about">
+  <h2>About</h2>
+  <p class="section-subtitle">Intimate, romantic, and full of meaning</p>
+  <p class="about">
+    Esther Snyder Photography specializes in capturing connection — the quiet moments,
+    the laughter between couples, and the tender bond between mothers and their babies.
+    With a refined, neutral aesthetic, each session is designed to feel effortless,
+    relaxed, and deeply personal.
+  </p>
+</section>
+
+<section id="services">
+  <h2>Services</h2>
+  <p class="section-subtitle">Tailored sessions for every love story</p>
+  <div class="services">
+    <div class="service-box">
+      <h3>Couples</h3>
+      <p>Romantic, storytelling sessions that celebrate connection and intimacy.</p>
+    </div>
+    <div class="service-box">
+      <h3>Maternity & Motherhood</h3>
+      <p>Soft, elegant imagery honoring pregnancy and the early days of motherhood.</p>
+    </div>
+    <div class="service-box">
+      <h3>Newborn</h3>
+      <p>Gentle, natural sessions capturing the beauty of new beginnings.</p>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2>Gallery</h2>
+  <p class="section-subtitle">A curated selection of recent work</p>
+  <div class="gallery">
+    <img src="photo1.jpg" alt="Photography sample">
+    <img src="photo2.jpg" alt="Photography sample">
+    <img src="photo3.jpg" alt="Photography sample">
+  </div>
+
+  <div class="gallery-alt">
+    <img src="photo4.jpg" alt="Photography sample">
+    <img src="photo5.jpg" alt="Photography sample">
+    <img src="photo6.jpg" alt="Photography sample">
+  </div>
+</section>
+
+<section id="testimonials">
+  <h2>Testimonials</h2>
+  <p class="section-subtitle">Kind words from clients</p>
+  <div class="testimonials">
+    <div class="testimonial">“Esther captured our love so beautifully and naturally. The photos feel timeless and emotional — exactly what we hoped for.”<span>— Couples Session</span></div>
+    <div class="testimonial">“As a new mom, I felt completely comfortable. Esther’s calm presence and eye for detail made these photos so special.”<span>— Motherhood Session</span></div>
+    <div class="testimonial">“Every image feels like a memory frozen in time. We will treasure these forever.”<span>— Newborn Session</span></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Book a Session</h2>
+  <p class="section-subtitle">I’d be honored to tell your story</p>
+  <div class="contact">
+    <form action="https://formspree.io/f/YOURFORMID" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Tell me about your vision" required></textarea>
+      <button type="submit">Send Inquiry</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  © 2026 Esther Snyder Photography · All rights reserved
+</footer>
+
+</body>
+</html>
